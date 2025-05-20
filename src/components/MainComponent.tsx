@@ -5,7 +5,7 @@ const MainComponent = ({ show }: { show: boolean }) => {
     show && (
       <div className="flex justify-center relative">
         <div className="mt-15 typewriter absolute w-fit">
-          <p className="anim-typewriter">Howdy, I'm Giselle</p>
+          <p className="anim-typewriter">Howdy, I'm Giselle :)</p>
           <p className="anim-typewriter delay-400">Computer Science @ UNSW</p>
           <p className="anim-typewriter delay-800">Winter Exchange @ UBC</p>
         </div>
