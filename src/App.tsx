@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { HomeComponent } from "./components/HomeComponent";
+import { MainComponent } from "./components/MainComponent";
 
 function App() {
+  const [showMain, setShowMain] = useState(false);
+
   const view = (e: any) => {
     const x = e.clientX / window.innerWidth - 0.5;
     const y = e.clientY / window.innerHeight - 0.5;
@@ -12,6 +16,7 @@ function App() {
         "style",
         `transform: translateX(${-x * depth}px) translateY(${-y * depth}px);`
       );
+      console.log(layer);
     });
   };
 
@@ -20,7 +25,8 @@ function App() {
       className="bg-[#19002a] w-screen h-screen flex flex-col justify-center items-center overflow-hidden"
       onMouseMove={view}
     >
-      <HomeComponent />
+      <HomeComponent showMain={showMain} setShowMain={setShowMain} />
+      <MainComponent show={showMain} />
     </div>
   );
 }

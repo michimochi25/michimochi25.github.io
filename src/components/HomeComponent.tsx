@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-const HomeComponent = () => {
+type HomeComponentProps = {
+  showMain: boolean;
+  setShowMain: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const HomeComponent = (props: HomeComponentProps) => {
   const [visible, setVisible] = useState(true);
-  const [zoomed, setZoomed] = useState(false);
 
   const handleClick = () => {
     setVisible(false);
     setTimeout(() => {
-      setZoomed(true);
-    }, 1500);
+      props.setShowMain(true);
+      console.log("FIREE");
+    }, 1000);
   };
 
   return (
@@ -17,7 +22,7 @@ const HomeComponent = () => {
       className={twMerge(
         "w-xl max-w-screen scene flex flex-col justify-center items-center",
         visible ? "" : "zoomed",
-        zoomed ? "hidden" : ""
+        props.showMain ? "hidden" : ""
       )}
     >
       {visible && (

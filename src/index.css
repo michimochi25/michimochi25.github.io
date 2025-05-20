@@ -10,7 +10,7 @@
   height: 100vh;
   transform-style: preserve-3d;
   position: relative;
-  transition: transform 2s;
+  transition: transform 1.5s;
 }
 
 .zoomed {
@@ -43,4 +43,37 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.floating {
+  animation: float 2s ease-in-out infinite;
+}
+
+.zoom-element {
+  transform: scale(0);
+  animation: zoom-in 2s ease-in-out 0.1s forwards;
 }
