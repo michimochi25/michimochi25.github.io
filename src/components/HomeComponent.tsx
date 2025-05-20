@@ -13,7 +13,6 @@ const HomeComponent = (props: HomeComponentProps) => {
     setVisible(false);
     setTimeout(() => {
       props.setShowMain(true);
-      console.log("FIREE");
     }, 1000);
   };
 
@@ -28,7 +27,7 @@ const HomeComponent = (props: HomeComponentProps) => {
       {visible && (
         <h1
           id="start"
-          className="layer z-3 cursor-pointer bg-[#000000]"
+          className="layer z-3 cursor-pointer bg-[#000000] hover:scale-120"
           onClick={handleClick}
         >
           Press Start

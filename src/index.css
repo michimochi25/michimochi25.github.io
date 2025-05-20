@@ -19,7 +19,6 @@
 
 .layer {
   position: absolute;
-  will-change: transform;
   transition: transform 0.1s ease-out;
 }
 
@@ -75,5 +74,5 @@
 
 .zoom-element {
   transform: scale(0);
-  animation: zoom-in 2s ease-in-out 0.1s forwards;
+  animation: zoom-in 1s ease forwards;
 }

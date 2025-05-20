@@ -16,7 +16,6 @@ function App() {
         "style",
         `transform: translateX(${-x * depth}px) translateY(${-y * depth}px);`
       );
-      console.log(layer);
     });
   };
 
