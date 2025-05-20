@@ -11,7 +11,7 @@ function App() {
 
     const layers = document.querySelectorAll(".layer");
     layers.forEach((layer, index) => {
-      const depth = (index + 1) * 45;
+      const depth = (index + 1) * 25;
       layer.setAttribute(
         "style",
         `transform: translateX(${-x * depth}px) translateY(${-y * depth}px);`
