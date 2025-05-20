@@ -76,3 +76,42 @@
   transform: scale(0);
   animation: zoom-in 1s ease forwards;
 }
+
+.typewriter p {
+  color: white;
+  font-family: "Courier";
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter p:nth-child(1) {
+  animation: typing 4s steps(18) 1s 1 normal both, blink-cursor 1s steps(18) 6;
+}
+
+.typewriter p:nth-child(2) {
+  animation: typing 4s steps(18) 6s 1 normal both,
+    blink-cursor 1s steps(18) 6s 6;
+}
+
+.typewriter p:nth-child(3) {
+  animation: typing 4s steps(18) 12s 1 normal both,
+    blink-cursor 1s steps(18) 12s infinite normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14em;
+  }
+}
+
+@keyframes blink-cursor {
+  from {
+    border-right: 0.15em solid orange;
+  }
+  to {
+    border-right: 0.15em solid transparent;
+  }
+}
